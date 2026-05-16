@@ -1,0 +1,977 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>श्री बंगाली बाबा सेवा परिवार | Spiritual Home</title>
+  <!-- Google Fonts + Devanagari -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Cinzel:wght@400;500;600;700&family=Mukta:wght@400;500;600;700;800&family=Tiro+Devanagari+Marathi&display=swap"
+    rel="stylesheet">
+  <!-- Font Awesome 6 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #FFF8E7;
+      /* Soft cream background */
+      font-family: 'Poppins', 'Mukta', sans-serif;
+      color: #3E2723;
+      scroll-behavior: smooth;
+    }
+
+    /* Color Variables */
+    :root {
+      --orange: #E67E22;
+      --gold: #F39C12;
+      --maroon: #7B241C;
+      --cream: #FFF8E7;
+      --white: #FFFFFF;
+      --darkbrown: #3E2723;
+      --warmgray: #6D4C41;
+      --gradient-orange: linear-gradient(135deg, #E67E22, #F39C12);
+    }
+
+    /* Global classes */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Typography */
+    h1,
+    h2,
+    h3,
+    .dev-heading {
+      font-family: 'Cinzel', 'Tiro Devanagari Marathi', serif;
+      font-weight: 700;
+    }
+
+    .marathi-text {
+      font-family: 'Mukta', 'Tiro Devanagari Marathi', sans-serif;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 28px;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: none;
+      font-size: 1rem;
+      background: var(--orange);
+      color: white;
+      text-decoration: none;
+    }
+
+    .btn-gold {
+      background: transparent;
+      border: 2px solid var(--gold);
+      color: var(--gold);
+      backdrop-filter: blur(2px);
+    }
+
+    .btn-gold:hover {
+      background: var(--gold);
+      color: #3E2723;
+      transform: translateY(-3px);
+    }
+
+    .btn-orange {
+      background: var(--orange);
+      color: white;
+      box-shadow: 0 4px 12px rgba(230, 126, 34, 0.3);
+    }
+
+    .btn-orange:hover {
+      background: #d35400;
+      transform: translateY(-2px);
+    }
+
+    /* Sticky Navbar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      background: var(--gradient-orange);
+      padding: 16px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      z-index: 1000;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: white;
+      font-family: 'Cinzel', serif;
+    }
+
+    .logo i {
+      font-size: 2rem;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      padding: 6px 0;
+      border-bottom: 2px solid transparent;
+      transition: 0.2s;
+    }
+
+    .nav-links a:hover {
+      border-bottom-color: var(--gold);
+      transform: translateY(-2px);
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 1.8rem;
+      color: white;
+      cursor: pointer;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(120deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('baba.jpeg') center/cover no-repeat;
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 3.8rem;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-sub {
+      font-size: 1.5rem;
+      margin: 20px 0;
+      letter-spacing: 2px;
+      font-family: 'Tiro Devanagari Marathi', serif;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    /* quote card */
+    .quote-card {
+      background: var(--white);
+      border-radius: 48px;
+      margin: 40px auto;
+      padding: 30px 40px;
+      text-align: center;
+      box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.1);
+      border-left: 8px solid var(--gold);
+      max-width: 900px;
+    }
+
+    .quote-icon {
+      font-size: 3rem;
+      color: var(--orange);
+    }
+
+    /* Quick access grid */
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      margin: 50px 0 30px;
+      color: var(--maroon);
+      position: relative;
+    }
+
+    .quick-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 28px;
+      margin: 40px 0;
+    }
+
+    .quick-card {
+      background: var(--white);
+      border-radius: 28px;
+      padding: 30px 18px;
+      text-align: center;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+
+    .quick-card i {
+      font-size: 2.8rem;
+      color: var(--orange);
+      margin-bottom: 15px;
+    }
+
+    .quick-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 8px;
+    }
+
+    .quick-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 28px -10px rgba(230, 126, 34, 0.2);
+      border-bottom: 3px solid var(--gold);
+    }
+
+    /* Event cards */
+    .event-cards {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .event-card {
+      background: white;
+      border-radius: 24px;
+      overflow: hidden;
+      width: 280px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      transition: 0.2s;
+    }
+
+    .event-img {
+      height: 160px;
+      background: var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+    }
+
+    .event-detail {
+      padding: 18px;
+    }
+
+    .countdown {
+      font-size: 0.9rem;
+      background: #f1e6d2;
+      display: inline-block;
+      padding: 5px 12px;
+      border-radius: 40px;
+      margin: 12px 0;
+    }
+
+    /* Footer */
+    footer {
+      background: #2c1a12;
+      color: #f0e2cf;
+      padding: 48px 20px 24px;
+      margin-top: 70px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 40px;
+      max-width: 1280px;
+      margin: auto;
+    }
+
+    .footer-grid i {
+      margin-right: 12px;
+      color: var(--gold);
+    }
+
+    /* Pages (each section hidden/shown via JS) */
+    .page {
+      display: none;
+    }
+
+    .active-page {
+      display: block;
+    }
+
+    /* additional page styles */
+    .search-bar {
+      background: white;
+      padding: 12px 20px;
+      border-radius: 60px;
+      display: flex;
+      gap: 15px;
+      margin: 30px auto;
+      max-width: 500px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .category-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin: 30px 0;
+    }
+
+    .tab {
+      background: #e9dfcf;
+      padding: 8px 22px;
+      border-radius: 40px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .tab.active {
+      background: var(--orange);
+      color: white;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 28px;
+      margin: 40px 0;
+    }
+
+    .art-card,
+    .mantra-card,
+    .granth-card {
+      background: white;
+      border-radius: 24px;
+      padding: 20px;
+      border-left: 4px solid var(--gold);
+      transition: 0.2s;
+    }
+
+    /* Aarti page styling - reduced padding for multiple aartis */
+    .aarti-section {
+      margin-bottom: 40px;
+      background: white;
+      border-radius: 28px;
+      padding: 20px 28px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      border: 1px solid rgba(243, 156, 18, 0.2);
+      transition: all 0.2s;
+    }
+
+    .aarti-section:hover {
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .aarti-title-small {
+      font-size: 1.6rem;
+      color: var(--maroon);
+      font-weight: 700;
+      margin-bottom: 10px;
+      border-left: 5px solid var(--gold);
+      padding-left: 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .aarti-text-compact {
+      font-family: 'Mukta', 'Tiro Devanagari Marathi', serif;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #2c3e2f;
+      white-space: pre-line;
+      background: #FFFDF5;
+      padding: 16px 20px;
+      border-radius: 24px;
+      margin-top: 12px;
+    }
+
+    .btn-icon-small {
+      background: transparent;
+      border: 1px solid var(--orange);
+      border-radius: 30px;
+      padding: 4px 12px;
+      margin: 8px 5px 0 0;
+      display: inline-block;
+      font-size: 0.75rem;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .btn-icon-small:hover {
+      background: var(--orange);
+      color: white;
+    }
+
+    /* Donation cards */
+    .donation-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin: 30px 0;
+    }
+
+    .donation-card {
+      background: white;
+      flex: 1;
+      border-radius: 28px;
+      padding: 28px;
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px 16px;
+      margin: 10px 0;
+      border-radius: 40px;
+      border: 1px solid #ddd;
+      font-family: inherit;
+    }
+
+    /* gallery masonry */
+    .masonry-grid {
+      column-count: 3;
+      column-gap: 20px;
+    }
+
+    .gallery-item {
+      break-inside: avoid;
+      margin-bottom: 20px;
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    @media (max-width: 768px) {
+      .masonry-grid {
+        column-count: 2;
+      }
+
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .aarti-section {
+        padding: 16px 18px;
+      }
+
+      .aarti-title-small {
+        font-size: 1.3rem;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 12px;
+        background: var(--orange);
+        padding: 20px;
+        border-radius: 20px;
+        margin-top: 12px;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .navbar {
+        flex-wrap: wrap;
+      }
+    }
+
+    .map-placeholder {
+      background: #c2b28b;
+      height: 280px;
+      border-radius: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px 0;
+    }
+
+    .floating-diya {
+      animation: float 3s infinite ease-in-out;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-8px);
+      }
+
+      100% {
+        transform: translateY(0px);
+      }
+    }
+
+    .live-tag {
+      background: #e67e22;
+      border-radius: 30px;
+      padding: 4px 12px;
+      font-size: 12px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">
+      <i class="fas fa-om floating-diya"></i>
+      <span>चैतन्य श्री बंगाली बाबा सेवा संस्थान</span>
+    </div>
+    <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+    <div class="nav-links" id="navLinks">
+      <a href="#" data-page="home">मुख्यपृष्ठ</a>
+      <a href="#" data-page="aarti">आरती संग्रह</a>
+      <a href="#" data-page="mantra">मंत्र संग्रह</a>
+      <a href="#" data-page="granth">ग्रंथ</a>
+      <a href="#" data-page="seva">सेवा/दान</a>
+      <a href="#" data-page="gallery">गॅलरी</a>
+      <a href="#" data-page="events">कार्यक्रम</a>
+      <a href="#" data-page="contact">संपर्क</a>
+    </div>
+  </div>
+
+  <!-- PAGES -->
+  <div id="home-page" class="page active-page">
+    <!-- Hero -->
+    <div class="hero">
+      <div class="hero-content">
+        <h1>श्री बंगाली बाबा सेवा संस्थान</h1>
+        <div class="hero-sub">श्रद्धा | सेवा | भक्ती</div>
+        <div class="hero-buttons">
+          <a href="#" class="btn btn-orange" data-page="aarti">📿 आरती पहा</a>
+          <a href="#" class="btn btn-gold" data-page="seva">🙏 सेवा बुक करा</a>
+          <a href="#" class="btn btn-orange" data-page="seva">✨ दान करा</a>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="quote-card">
+        <i class="fas fa-quote-left quote-icon"></i>
+        <p style="font-size:1.4rem; margin: 16px 0;">"भक्ती हीच खरी शक्ती, सेवा हाच खरा मार्ग" — बंगाली बाबा</p>
+        <i class="fas fa-lotus" style="color:#E67E22;"></i>
+      </div>
+      <h2 class="section-title">🙏 आध्यात्मिक सेवा सुविधा</h2>
+      <div class="quick-grid">
+        <div class="quick-card"><i class="fas fa-praying-hands"></i>
+          <h3>आरती</h3><span>दैनिक</span>
+        </div>
+        <div class="quick-card"><i class="fas fa-microphone-alt"></i>
+          <h3>मंत्र</h3><span>शक्तिशाली</span>
+        </div>
+        <div class="quick-card"><i class="fas fa-book-open"></i>
+          <h3>ग्रंथ</h3><span>अध्ययन</span>
+        </div>
+        <div class="quick-card"><i class="fas fa-hand-holding-heart"></i>
+          <h3>सेवा</h3><span>पुण्यदायी</span>
+        </div>
+        <div class="quick-card"><i class="fas fa-images"></i>
+          <h3>गॅलरी</h3><span>दर्शन</span>
+        </div>
+        <div class="quick-card"><i class="fas fa-video"></i>
+          <h3>Live दर्शन</h3><span>प्रसारण</span>
+        </div>
+      </div>
+      <h2 class="section-title">📅 आगामी कार्यक्रम</h2>
+      <div class="event-cards">
+        <div class="event-card">
+          <div class="event-img"><i class="fas fa-calendar-alt fa-3x"></i></div>
+          <div class="event-detail">
+            <h3>राम नवमी महोत्सव</h3>
+            <div class="countdown">⏳ 5 दिवस बाकी</div><a href="#" class="btn-icon">रजिस्टर</a>
+          </div>
+        </div>
+        <div class="event-card">
+          <div class="event-img"><i class="fas fa-dharmachakra fa-3x"></i></div>
+          <div class="event-detail">
+            <h3>गुरु पौर्णिमा सत्संग</h3>
+            <div class="countdown">⏳ 12 दिवस बाकी</div><a href="#" class="btn-icon">माहिती</a>
+          </div>
+        </div>
+        <div class="event-card">
+          <div class="event-img"><i class="fas fa-hands-helping fa-3x"></i></div>
+          <div class="event-detail">
+            <h3>अन्नदान महासेवा</h3>
+            <div class="countdown">⏳ 3 दिवस बाकी</div><a href="#" class="btn-icon">सहभाग</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AARTI PAGE - Reduced padding, multiple aartis: Ganpati, Shankar, Dattatreya -->
+  <div id="aarti-page" class="page">
+    <div class="container">
+      <h2 class="section-title">🪔 श्री आरती संग्रह</h2>
+
+      <!-- Ganpati Aarti -->
+      <div class="aarti-section">
+        <div class="aarti-title-small">
+          <i class="fas fa-ganesha" style="color: #E67E22;"></i>
+          <span>श्री गणेश आरती</span>
+        </div>
+        <div class="aarti-text-compact">
+          <strong>जय गणेश जय गणेश, जय गणेश देवा ।</strong><br />
+          माता जाकी पार्वती, पिता महादेवा ॥<br />
+          एक दंत दयावंत, चार भुजाधारी ।<br />
+          माथे सिंदूर सोहे, मूसे की सवारी ॥<br />
+          अंधकासुर संहारी, मूषक वाहन ।<br />
+          कोटि सूरज प्रकाश, आरती जनहि शुभ फल दान ॥<br />
+          पान चढ़े, फूल चढ़े, और चढ़े मेवा ।<br />
+          लड्डुअन का भोग लगे, संत करे सेवा ॥<br />
+          <strong>ॐ गं गणपतये नमः ।</strong>
+        </div>
+        <div>
+          <button class="btn-icon-small" onclick="alert('जय गणेश देवा आरती श्रवण')"><i class="fas fa-play"></i>
+            श्रवण</button>
+          <button class="btn-icon-small" onclick="window.print()"><i class="fas fa-print"></i> प्रिंट</button>
+        </div>
+      </div>
+
+      <!-- Shankar / Shiva Aarti -->
+      <div class="aarti-section">
+        <div class="aarti-title-small">
+          <i class="fas fa-shield-alt" style="color: #E67E22;"></i>
+          <span>श्री शंकर आरती </span>
+        </div>
+        <div class="aarti-text-compact">
+          <strong>॥ श्री शंकर आरती ॥</strong><br /><br />
+
+          लवथवती विक्राळा ब्रह्मांडी माळा ।<br />
+          वीषें कंठ काळा त्रिनेत्रीं ज्वाळा ॥<br />
+          लावण्यसुंदर मस्तकीं बाळा ।<br />
+          तेथुनियां जल निर्मळ वाहे झुळझूळां ॥ १ ॥<br /><br />
+
+          जय देव जय देव जय श्रीशंकरा ।<br />
+          आरती ओवाळूं तुज कर्पूरगौरा ॥ ध्रु० ॥<br /><br />
+
+          कर्पूरगौरा भोळा नयनीं विशाळा ।<br />
+          अर्धांगीं पार्वती सुमनांच्या माळा ॥<br />
+          विभुतीचें उधळण शितिकंठ नीळा ।<br />
+          ऐसा शंकर शोभे उमावेल्हाळा ॥ जय देव० ॥ २ ॥<br /><br />
+
+          देवीं दैत्य सागरमंथन पै केलें ।<br />
+          त्यामाजीं जें अवचित हळाहळ उठिलें ॥<br />
+          तें त्वां असुरपणें प्राशन केलें ।<br />
+          नीळकंठ नाम प्रसिद्ध झालें ॥ जय देव० ॥ ३ ॥<br /><br />
+
+          व्याघ्रांबर फणिवरधर सुंदर मदनारी ।<br />
+          पंचानन मनमोहन मुनिजनसुखकारी ॥<br />
+          शतकोटीचें बीज वाचे उच्चारी ।<br />
+          रघुकुळटिळक रामदासा अंतरीं ॥ जय देव जय देव० ॥ ४ ॥<br /><br />
+
+          <strong>ॐ नमः शिवाय । हर हर महादेव ॥</strong>
+        </div>
+        <div>
+          <button class="btn-icon-small" onclick="alert('जय शिव ओंकारा आरती - शंकर भगवान की आरती')"><i
+              class="fas fa-play"></i> श्रवण</button>
+          <button class="btn-icon-small" onclick="window.print()"><i class="fas fa-print"></i> प्रिंट</button>
+        </div>
+      </div>
+
+      <!-- Dattatreya Aarti -->
+      <div class="aarti-section">
+        <div class="aarti-title-small">
+          <i class="fas fa-pray" style="color: #E67E22;"></i>
+          <span>श्री दत्त आरती</span>
+        </div>
+        <div class="aarti-text-compact">
+          <strong>॥ श्री दत्त आरती ॥</strong><br /><br />
+
+          त्रिगुणात्मक त्रैमूर्ती दत्त हा जाणा ।<br />
+          त्रिगुणी अवतार त्रैलोक्य राणा ।<br />
+          नेती नेती शब्द न ये अनुमाना ॥<br />
+          सुरवर मुनिजन योगी समाधी न ये ध्याना ॥<br /><br />
+
+          जय देव जय देव जय श्री गुरुद्त्ता ।<br />
+          आरती ओवाळिता हरली भवचिंता ॥<br /><br />
+
+          सबाह्य अभ्यंतरी तू एक द्त्त ।<br />
+          अभाग्यासी कैची कळेल हि मात ॥<br />
+          पराही परतली तेथे कैचा हेत ।<br />
+          जन्ममरणाचाही पुरलासे अंत ॥<br /><br />
+
+          दत्त येऊनिया ऊभा ठाकला ।<br />
+          भावे साष्टांगेसी प्रणिपात केला ॥<br />
+          प्रसन्न होऊनि आशीर्वाद दिधला ।<br />
+          जन्ममरणाचा फेरा चुकवीला ॥<br /><br />
+
+          दत्त दत्त ऐसें लागले ध्यान ।<br />
+          हरपले मन झाले उन्मन ॥<br />
+          मी तू पणाची झाली बोळवण ।<br />
+          एका जनार्दनी श्रीदत्तध्यान ॥<br /><br />
+
+          <strong>श्री दत्तात्रेय महाराज की जय ॥</strong>
+        </div>
+        <div>
+          <button class="btn-icon-small" onclick="alert('श्री दत्तात्रेय आरती - दत्त मंदिर')"><i
+              class="fas fa-play"></i> श्रवण</button>
+          <button class="btn-icon-small" onclick="window.print()"><i class="fas fa-print"></i> प्रिंट</button>
+        </div>
+      </div>
+
+      <!-- Navnathanchi  Aarti -->
+      <div class="aarti-section">
+        <div class="aarti-title-small">
+          <i class="fas fa-pray" style="color: #E67E22;"></i>
+          <span>श्री नवनाथांची आरती</span>
+        </div>
+        <div class="aarti-text-compact">
+          <strong>॥ श्री नवनाथांची आरती ॥</strong><br /><br />
+
+          जयदेव जयदेव जय नवनाथा ।<br />
+          भक्तगण उद्धरी देउनी सिद्ध करा ॥धृ॥<br /><br />
+
+          मच्छिन्द्र गोरख तैसे जालिंदरनाथ ।<br />
+          कानिफ गहिनीनाथ नागेशासहित ।<br />
+          चर्पटी भर्तरी रेवण मिळुनी नऊनाथ ।<br />
+          नवनारायण अवतार संत ॥१॥<br /><br />
+
+          भक्तीशक्ती बोधावैराग्यहीत ।<br />
+          तापत्रय ते हरिती स्मरा एकचित्त ।<br />
+          नमने चरित्र पठणे दुरितांचे अंत ।<br />
+          भक्त जणांशी तारी नवनाथ खचित ॥२॥<br /><br />
+
+          इहपर साधूंनी देती समस्त नवनाथ ।<br />
+          भूत समंधा प्रेता घालविती सत्य ।<br />
+          भक्त जणांचे पुरवा तुम्हीच संकल्प ।<br />
+          कृतार्थ होता दावा सदानंद रूप ॥३॥<br /><br />
+
+          दुखी दरिद्री लोकांना तारा ।<br />
+          देउनी सुख संपत्ती मुक्ती दोहीं करा ।<br />
+          स्मरन करावे आता नित्य नित्यनाथा ।<br />
+          शरणागत मी तुमच्यापायी मम माथा ॥४॥<br /><br />
+
+          नवनाथची आधार सकलांनाआता ।<br />
+          आरती ओवाळिता हरळी भवचिंता ।<br />
+          ब्रम्ह सनातन शांती देई मम चित्ता ।<br />
+          शरण विनायक लोटांगण आता ॥५॥<br /><br />
+
+          <strong>श्री नवनाथ महाराज की जय ॥</strong>
+        </div>
+        <div>
+          <button class="btn-icon-small" onclick="alert('श्री दत्तात्रेय आरती - दत्त मंदिर')"><i
+              class="fas fa-play"></i> श्रवण</button>
+          <button class="btn-icon-small" onclick="window.print()"><i class="fas fa-print"></i> प्रिंट</button>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin: 15px 0 40px; color: #b45f1b;"><i class="fas fa-om"></i> सर्व आरत्या
+        सद्भावाने गा, दीप प्रज्वलित करून . . . <i class="fas fa-om"></i></div>
+    </div>
+  </div>
+
+  <!-- MANTRA PAGE -->
+  <div id="mantra-page" class="page">
+    <div class="container">
+      <h2 class="section-title">🔱 मंत्र संग्रह</h2>
+      <div class="search-bar"><input type="text" placeholder="मंत्र शोधा..." id="mantraSearch"></div>
+      <div class="card-grid" id="mantraGrid"></div>
+    </div>
+  </div>
+
+  <!-- GRANTH PAGE -->
+  <div id="granth-page" class="page">
+    <div class="container">
+      <h2 class="section-title">📖 ग्रंथ संग्रहालय</h2>
+      <div class="card-grid" id="granthGrid"></div>
+    </div>
+  </div>
+
+  <!-- SEVA / DONATION -->
+  <div id="seva-page" class="page">
+    <div class="container">
+      <h2 class="section-title">🌸 सेवा व दान विभाग</h2>
+      <div class="donation-row">
+        <div class="donation-card"><i class="fas fa-hand-holding-usd fa-2x" style="color:#E67E22"></i>
+          <h3>दान करा (UPI / रेझरपे)</h3>
+          <p>UPI ID: bengalibaba@okhdfcbank</p><button class="btn btn-orange" style="margin-top:16px">रुपे कार्ड / नेट
+            बँकिंग</button>
+          <div class="map-placeholder" style="height:80px;background:#f9e0b0; border-radius:20px; margin-top:15px"><i
+              class="fas fa-qrcode"></i> QR Code स्कॅन करा</div>
+        </div>
+        <div class="donation-card"><i class="fas fa-pray"></i>
+          <h3>सेवा बुकिंग</h3>
+          <form id="sevaForm"><select>
+              <option>रुद्राभिषेक पूजा</option>
+              <option>महामृत्युंजय जप</option>
+              <option>सत्यनारायण कथा</option>
+            </select><input type="date" placeholder="तारीख"><input type="text" placeholder="भक्ताचे नाव"><input
+              type="text" placeholder="मोबाईल"><button class="btn btn-orange" type="button"
+              onclick="alert('सेवा बुक झाली, संपर्क येईल')">बुक करा</button></form>
+        </div>
+      </div>
+      <div class="donation-card">
+        <h3>बँक खाते तपशील</h3>
+        <p>बँक ऑफ बडोदा | खाते क्रमांक: 1234567890 | IFSC: BARB0BANGL</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- GALLERY PAGE -->
+  <div id="gallery-page" class="page">
+    <div class="container">
+      <h2 class="section-title">🌟 दिव्य गॅलरी</h2>
+      <div class="category-tabs" id="galleryTabs"><span class="tab active" data-gal="all">सर्व</span><span class="tab"
+          data-gal="samadhi">समाधी</span><span class="tab" data-gal="utsav">उत्सव</span><span class="tab"
+          data-gal="bhakt">भक्त</span></div>
+      <div class="masonry-grid" id="galleryGrid"></div>
+    </div>
+  </div>
+
+  <!-- EVENTS PAGE -->
+  <div id="events-page" class="page">
+    <div class="container">
+      <h2 class="section-title">🎉 कार्यक्रम कॅलेंडर</h2>
+      <div class="event-cards" id="eventList"></div>
+      <div style="margin-top:40px; background: #FDEBD0; border-radius: 28px; padding: 20px;"><i
+          class="fas fa-calendar-week"></i> संपूर्ण कार्यक्रम तक्ता: प्रत्येक महिन्याची पौर्णिमा - सामूहिक आरती व प्रसाद
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT PAGE -->
+  <div id="contact-page" class="page">
+    <div class="container">
+      <h2 class="section-title">📞 संपर्क करा</h2>
+      <div class="donation-row">
+        <div class="donation-card"><i class="fas fa-map-marker-alt"></i>
+          <h3>मंदिर पत्ता</h3>
+          <p>श्री बंगाली बाबा मंदिर, नागपूर - 440001, महाराष्ट्र</p>
+          <div class="map-placeholder"><i class="fas fa-map"></i> गुगल नकाशा एम्बेड</div>
+        </div>
+        <div class="donation-card">
+          <h3>संपर्क फॉर्म</h3>
+          <form><input placeholder="नाव"><input placeholder="ई-मेल"><textarea rows="3"
+              placeholder="माहिती / प्रश्न"></textarea><button class="btn btn-orange">पाठवा</button></form>
+          <div style="margin-top: 20px;"><a href="#" class="btn-icon"><i class="fab fa-whatsapp"></i> व्हॉट्सअॅप: +91
+              98765 43210</a> &nbsp;<a href="#" class="btn-icon"><i class="fas fa-phone-alt"></i> कॉल: 0712-123456</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div><i class="fas fa-temple"></i> श्री बंगाली बाबा सेवा परिवार<br>श्रद्धा, सेवा, भक्तीचे संगम</div>
+      <div><i class="fab fa-facebook"></i> Facebook &nbsp; <i class="fab fa-youtube"></i> YouTube &nbsp; <i
+          class="fab fa-instagram"></i> Instagram</div>
+      <div><i class="fas fa-donate"></i> <a href="#" style="color:#F39C12" data-page="seva">दान करा</a> | <i
+          class="fas fa-envelope"></i> baba@sevaparivar.org</div>
+      <div>© 2025 सर्व हक्क राखीव | मंदिर अधिकार</div>
+    </div>
+  </footer>
+
+  <script>
+    // Data sections (other pages remain unchanged)
+    const mantraData = [
+      { name: "गायत्री मंत्र", japa: "108 वेळा", labh: "बुद्धी विकास", audio: true },
+      { name: "महामृत्युंजय मंत्र", japa: "21 वेळा", labh: "आरोग्य, दीर्घायुष्य", audio: true },
+      { name: "बंगाली बाबा मंत्र", japa: "मनोकामना", labh: "सुख, शांती", audio: true },
+      { name: "ॐ नमः शिवाय", japa: "अनंत", labh: "मोक्ष प्राप्ती", audio: true },
+    ];
+    const granthData = [
+      { title: "श्रीमद्भगवद्गीता", pages: "अध्याय १२", pdf: "#", cover: "📜" },
+      { title: "बंगाली बाबा चरित्रामृत", pages: "भक्तिपूर्ण", pdf: "#", cover: "📖" },
+      { title: "रामचरितमानस", pages: "सुंदरकांड", pdf: "#", cover: "🕉️" },
+    ];
+    const galleryItems = [
+      { type: "samadhi", img: "समाधी मंदिर दर्शन", icon: "🛕" }, { type: "utsav", img: "होळी उत्सव", icon: "🎭" }, { type: "bhakt", img: "भक्त समूह", icon: "👥" },
+      { type: "samadhi", img: "बाबांची समाधी", icon: "🪦" }, { type: "utsav", img: "रथ यात्रा", icon: "🚩" }, { type: "bhakt", img: "पादुका पूजन", icon: "🌸" }
+    ];
+    const eventsArray = [
+      { name: "राम नवमी महोत्सव", date: "6 एप्रिल", reg: true }, { name: "हनुमान जयंती", date: "12 एप्रिल", reg: false }, { name: "गुरु पूर्णिमा मेळावा", date: "21 जुलै", reg: true }
+    ];
+
+    function renderMantra(search = "") {
+      let filtered = mantraData.filter(m => m.name.includes(search) || m.labh.includes(search));
+      document.getElementById("mantraGrid").innerHTML = filtered.map(m => `<div class="mantra-card"><i class="fas fa-om"></i><h3>${m.name}</h3><p>🔁 जप: ${m.japa}</p><p>🌟 लाभ: ${m.labh}</p>${m.audio ? '<button class="btn-icon">🔊 ऐका</button>' : ''}</div>`).join("");
+    }
+    function renderGranth() {
+      document.getElementById("granthGrid").innerHTML = granthData.map(g => `<div class="granth-card"><div style="font-size:3rem">${g.cover}</div><h3>${g.title}</h3><p>${g.pages}</p><button class="btn-icon">📖 आता वाचा</button><button class="btn-icon">⬇️ PDF</button></div>`).join("");
+    }
+    function renderGallery(galFilter = "all") {
+      let items = galleryItems.filter(i => galFilter === "all" ? true : i.type === galFilter);
+      document.getElementById("galleryGrid").innerHTML = items.map(i => `<div class="gallery-item"><div style="background:#fbe9ce; padding:20px; text-align:center"><span style="font-size:3rem">${i.icon}</span><p>${i.img}</p><i class="fas fa-search-plus"></i> दर्शन</div></div>`).join("");
+    }
+    function renderEvents() {
+      document.getElementById("eventList").innerHTML = eventsArray.map(e => `<div class="event-card"><div class="event-img"><i class="fas fa-chalkboard-user fa-3x"></i></div><div class="event-detail"><h3>${e.name}</h3><div>📅 ${e.date}</div>${e.reg ? '<button class="btn-icon">रजिस्टर करा</button>' : '<span class="live-tag">फ्री दर्शन</span>'}</div></div>`).join("");
+    }
+
+    function showPage(pageId) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active-page'));
+      document.getElementById(`${pageId}-page`).classList.add('active-page');
+      if (pageId === 'mantra') renderMantra();
+      if (pageId === 'granth') renderGranth();
+      if (pageId === 'gallery') renderGallery();
+      if (pageId === 'events') renderEvents();
+      // aarti page is static now with multiple aartis, no extra render needed
+    }
+
+    document.querySelectorAll('[data-page]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const page = link.getAttribute('data-page');
+        showPage(page);
+        window.scrollTo(0, 0);
+      });
+    });
+
+    if (document.getElementById("mantraSearch")) document.getElementById("mantraSearch").addEventListener("input", e => renderMantra(e.target.value));
+    document.querySelectorAll("#galleryTabs .tab").forEach(t => t.addEventListener("click", function () { document.querySelectorAll("#galleryTabs .tab").forEach(tab => tab.classList.remove("active")); this.classList.add("active"); renderGallery(this.dataset.gal); }));
+
+    const hamburger = document.getElementById("hamburger");
+    const navLinksDiv = document.getElementById("navLinks");
+    if (hamburger) hamburger.addEventListener("click", () => navLinksDiv.classList.toggle("show"));
+
+    showPage('home');
+    renderGranth();
+    renderEvents();
+    renderMantra();
+    renderGallery();
+  </script>
+</body>
+
+</html>
